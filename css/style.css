@@ -1,0 +1,263 @@
+:root {
+    --cinza-claro: #F5F5F5;
+    --cinza-medio: #CCCCCC;
+    --cinza-escuro: #4D4D4D;
+    --verde-musgo: #6B8E23;
+    --azul-acinzentado: #A9B8C3;
+    --preto-absoluto: #000000;
+    --preto-ebano: #0C0C0C;
+    --preto-carvao: #1C1C1C;
+    --preto-asfalto: #2F2F2F;
+    --preto-grafite: #3B3B3B;
+    --preto-ardosia: #4A4A4A;
+}
+
+
+
+
+/* INICIO DO HEADER */
+
+.header {
+    display: flex;
+    background-color: var(--cinza-escuro);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 5px 20px;
+
+    /* font */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.img-logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.header a {
+    margin-left: 20px;
+    color: var(--cinza-claro);
+}
+
+.nav-ul{
+    display: flex;
+}
+
+.nav-ul li{
+    margin-left: 10px;
+}
+
+.nav-ul li a{
+    display: block;
+    padding: 10px;
+}
+
+/* FIM DO HEADER */
+
+
+/* INICIO DO BODY */
+
+img{
+    max-width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+main h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--preto-absoluto);
+}
+
+.grid p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cinza-claro);
+    background-color: var(--preto-grafite);
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1560px;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* .grid > div:nth-child(n+4){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+} */
+
+.grid > div.texto{
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+@media (max-width: 600px){
+    grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid > div:nth-child(n+4){
+        display: block;
+    }
+    
+    .grid > div.texto{
+        grid-column: 1/4;
+        grid-row: auto;
+        order: -1;
+    }
+}
+/* fim do grid */
+
+
+/* sobre */
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 660px;
+    gap: 20px;
+    margin: 20px;
+    background-color: var(--preto-ardosia);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sobre h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cinza-claro);
+}
+
+.sobre p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cinza-claro);
+}
+
+/* fim sobre */
+
+/* fim da main */
+
+/* footer */
+
+.form {
+    background-color: var(--preto-grafite);
+    padding: 20px;
+    text-align: center;
+    max-width: 660px;
+    width: 100%;
+    border-radius: 15px;
+    padding-top: 30px;
+    margin: 20px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid var(--cinza-medio);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form input[type="submit"] {
+    background-color: var(--verde-musgo);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form input[type="submit"]:hover {
+    background-color: var(--azul-acinzentado);
+}
+/* fim do formulario */
+/* fim da main */
+
+/* INICIO DO FOOTER */
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: var(--preto-asfalto);
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #bcbcbc;
+    gap: 20px;
+    padding: 10px;
+}
+
+.footer-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-ul li{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-ul li a{
+    font-size: 10px;
+}
+
+#ul-p{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* FIM DO FOOTER */
+
+
+/* ICONS */
+.fa-facebook, .fa-twitter, .fa-instagram{
+    color: #bcbcbc;
+    font-size: 25px;
+}

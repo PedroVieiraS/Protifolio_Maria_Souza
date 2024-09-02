@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cinza-claro: #F5F5F5;
+    --cinza-medio: #CCCCCC;
+    --cinza-escuro: #4D4D4D;
+    --verde-musgo: #6B8E23;
+    --azul-acinzentado: #A9B8C3;
+}
+
+body{
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    background-color: var(--cinza-medio);
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
